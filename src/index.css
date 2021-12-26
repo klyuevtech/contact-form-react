@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+.main-container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+}
+.content-container {
+  max-width: 100%;
+  width: 500px;
+}
+.content-container main {
+  position: relative;
+}
+
+#phone:placeholder-shown {
+  background-color: #fff;
+}
+#phone:not(:placeholder-shown) {
+  font-family: monospace;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.phone-form-elem-background {
+  position: absolute;
+  width: 100%;
+  line-height: 30px;
+  padding-left: 6px;
+}
+.phone-form-elem-background > span {
+  font-family: monospace;
+  font-size: 14px;
+}
+.phone-form-elem-overlay {
+  color: #fff;
+  position: absolute;
+  left: 0;
+  padding-right: 1px;
+  padding-left: 6px;
+  background: #fff;
+}
+.phone-form-elem-hint {
+  position: absolute;
+}
+textarea#question {
+  max-width: 100%;
+  width: 400px;
+  height: 200px;
+}
+.submit-button {
+  color: #333;
+  width: 100px;
+  padding: 5px 20px;
+  background: #fff;
+  border: 1px solid #555;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+  transition: all .1s ease;
+}
+.submit-button:hover {
+  background: #333;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.top-message-container {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+.top-message {
+  position: absolute;
+  padding: 20px;
+  max-width: 50%;
+  width: max-content;
+  transition: all 1s ease;
+  overflow: hidden;
+  opacity: 0;
+  background: #efefef;
+  border-radius: 7px;
+}
+#form_overlay {
+  color: #fff;
+  font-size: 22px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 0;
+  border-radius: 5px;
+  background: #000;
+  opacity: .5;
+}
+#form_overlay.overlay-show {
+  max-height: unset;
+}
+#form_overlay > .spinner {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 12px;
+  border: 4px dashed;
+  border-radius: 50%;
+  animation: 2s linear infinite spinner-rotation;
+}
+@keyframes spinner-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

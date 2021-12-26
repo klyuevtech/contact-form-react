@@ -1,0 +1,58 @@
+.contact-form-container {
+    padding: 20px;
+    padding-top: 0;
+}
+#contact_form {
+    display: flex;
+    flex-flow: column;
+    margin-top: 30px;
+}
+.form-field {
+    position: relative;
+    margin-top: 10px;
+}
+
+label {
+    font-size: 13px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease, margin .3s ease;
+}
+label.show,
+label.label-datepicker {
+    margin-top: -14px;
+    opacity: .7;
+}
+label.label-question {
+    margin-top: -20px;
+}
+.form-elem {
+    position: relative;
+    margin-bottom: 25px;
+    padding: 6px;
+    border-radius: 0;
+    border: 1px solid #aaa;
+    transition: all 0.2s ease-in-out;
+}
+.form-elem:focus,
+.form-elem:focus-visible {
+    outline: none;
+    box-shadow: none;
+    border-color: cyan;
+}
+.form-elem.error {
+    border-color: red;
+    box-shadow: 0 0 2px -2px red;
+}
+.form-elem.has-value:not(.error):not(:focus) {
+    border-color: #000;
+    box-shadow: 0 0 2px -2px #000;
+}
+input.form-elem {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    max-width: 100%;
+    width: 400px;
+    border: 0;
+    border-bottom: 1px solid #aaa;
+}
